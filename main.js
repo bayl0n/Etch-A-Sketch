@@ -63,7 +63,6 @@ function colorCellBlack() {
 function colorCellRGB() {
     let color = `rgb(${Math.floor(Math.random() * 255) + 1}, ${Math.floor(Math.random() * 255) + 1}, ${Math.floor(Math.random() * 255) + 1})`;
     this.style.backgroundColor = color;
-    console.log(color);
 }
 
 function colorCellErase() {
