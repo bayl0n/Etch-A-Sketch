@@ -1,5 +1,5 @@
-# Etch-A-Sketch
-A JavaScript Etch-A-Sketch project
+# SketchPad
+A primitive drawing application using JavaScript, HTML and CSS.
 
 **This project uses:**
   * HTML
