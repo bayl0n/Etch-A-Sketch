@@ -86,4 +86,9 @@ header {
     background-color: #E1E1E1;
     color: white;
     border: 1px solid #2F2F2F;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }

@@ -51,22 +51,29 @@ function drawGrid(cellSize) {
 function addDrawStyle() {
     let cellGrid = document.querySelectorAll('div.cell');
     cellGrid.forEach((cell) => {
-        cell.removeEventListener('mouseover', drawStyle);
-        cell.addEventListener('mouseover', drawStyle);
+        cell.removeEventListener('mouseover', draw);
+        cell.addEventListener('mouseover', draw);
+        cell.removeEventListener('mousedown', draw);
+        cell.addEventListener('mousedown', draw);
     });
 }
 
+function draw(e) {
+    console.log(e);
+    if (e.which === 1) this.style.backgroundColor = drawStyle();
+}
+
 function colorCellBlack() {
-    this.style.backgroundColor = 'black';
+    return 'black';
 }
 
 function colorCellRGB() {
     let color = `rgb(${Math.floor(Math.random() * 255) + 1}, ${Math.floor(Math.random() * 255) + 1}, ${Math.floor(Math.random() * 255) + 1})`;
-    this.style.backgroundColor = color;
+    return color;
 }
 
 function colorCellErase() {
-    this.style.backgroundColor = '#E1E1E1';
+    return '#E1E1E1';
 }
 
 function clearGrid() {
